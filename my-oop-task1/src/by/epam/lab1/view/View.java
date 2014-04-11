@@ -1,37 +1,59 @@
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
 package by.epam.lab1.view;
 
-import by.epam.lab1.entiry.Treasure;
+import java.util.List;
 import by.epam.lab1.to.TO;
-import by.epam.lab1.to.TOwithPrices;
-
 
 public class View {
-	
-	private int commandIndex;
-	private TO to;
-	
-	public View(int commandIndex, String name, int price){
-		this.commandIndex = commandIndex;
-		to = new TO();
-		this.to.treasure = new Treasure(name, price);
-	}
-	public View(int commandIndex){
-		this.commandIndex = commandIndex;
-		to = new TO();
-	}
-	public View(int commandIndex, int price1, int price2){
-		this.commandIndex = commandIndex;
-		to = new TOwithPrices();
-		((TOwithPrices)to).lowprice = price1;
-		((TOwithPrices)to).highprice = price2;
-	}
-	
-	
-	public int getCommandIndex() {
-		return commandIndex;
-	}
-	
-	public TO getTO() {
-		return to;
-	}
+    
+    private int command;
+    private int price;
+    private String name;
+    private int priceValue1;
+    private int priceValue2;
+    
+    public View(int command, String name, int price) {
+        this.command = command;
+        this.name = name;
+        this.price = price;
+    }
+
+    View(int command, int price1, int price2) {
+        this.command = command;
+        this.priceValue1 = price1;
+        this.priceValue2 = price2;
+        
+    }
+    
+    View(int command){
+        this.command = command;
+    }
+
+    public int getPrice() {
+        return price;
+    }
+    
+    public String getName() {
+        return name;
+    }
+
+    public int getCommand() {
+        return command;
+    }
+
+    public void output(List<TO> toList) {
+    	for(TO to : toList)
+        System.out.println(to.treasure + to.message);
+    }
+    public int getPriceValue1() {
+        return priceValue1;
+    }
+
+    public int getPriceValue2() {
+        return priceValue2;
+    }
+    
 }

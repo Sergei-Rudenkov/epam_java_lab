@@ -4,5 +4,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Treasury {
-	public static List<Treasure> depot = new ArrayList<Treasure>();
+	private List<Treasure> depot = new ArrayList<Treasure>();
+        
+        public List<Treasure> getDepot(){
+            return depot;
+        } 
 }
