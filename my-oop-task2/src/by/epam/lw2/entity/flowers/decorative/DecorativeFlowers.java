@@ -1,5 +1,4 @@
 package by.epam.lw2.entity.flowers.decorative;
-
 import by.epam.lw2.entity.flowers.Flower;
 
 public abstract class DecorativeFlowers extends Flower {
@@ -8,6 +7,4 @@ public abstract class DecorativeFlowers extends Flower {
 		super(color);
 		// TODO Auto-generated constructor stub
 	}
-	
-
 }

@@ -45,20 +45,32 @@ public enum FlowerCreator {
                 return new Gerbera(color);
             case CHRYSANTHEMUMCREATOR:
                 return new Chrysanthemum(color);
-            case CAMOMILECREATOR:
-                return new Camomile(color);
-            case BELLFLOWER:
-                return new BellFlower(color);
-            case KAKTUSCREATOR:
-                return new Kaktus(color);
-            case LUPINCREATOR:
-                return new Lupin(color);
             case ORCHIDCREATOR:
                 return new Orchid(color);
-                
         }
         return null;
     }
-
+    
+    public Flower factoryMethod(String color, String size){
+    		switch (this){
+    		case KAKTUSCREATOR:
+    			return new Kaktus(color, size);
+    		}
+    	return null;	
+    }
+    
+    public Flower factoryMethod(String color, int length){
+		switch (this){
+		case CAMOMILECREATOR:
+            return new Camomile(color, length);
+        case BELLFLOWER:
+            return new BellFlower(color, length);
+        case LUPINCREATOR:
+            return new Lupin(color, length);
+		}
+	return null;	
 }
+    
+}
+
 

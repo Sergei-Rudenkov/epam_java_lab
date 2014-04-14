@@ -24,8 +24,6 @@ public class BouquetBuielder {
         public Bouquet build() {
             if (flowers == null)
                 return null;
-            if (pack == null)
-                return null;
             return new Bouquet(this);
         }
         

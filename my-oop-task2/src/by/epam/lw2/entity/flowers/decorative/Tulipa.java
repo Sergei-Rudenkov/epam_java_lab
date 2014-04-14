@@ -6,5 +6,6 @@ public class Tulipa extends DecorativeFlowers {
         super(color);
         name = "Tulipa";
     }
+    
 }
 
